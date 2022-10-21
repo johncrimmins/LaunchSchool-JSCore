@@ -32,15 +32,10 @@ function getInputs () {
 
 function calcPayment (amount, apr, durationInYears) {
   let durationInMonths = durationInYears * 12;
-  let monthlyIntRate = apr / 12;
+  let monthlyIntRate = apr / 12 / 100;
 
-  debugger;
-  console.log((1 - Math.pow((1 + monthlyIntRate), (-durationInMonths))))
   let payment = amount * (monthlyIntRate / (1 - Math.pow((1 + monthlyIntRate), (-durationInMonths))));
-  debugger;
-  console.log(payment);
   return payment;
-
 }
 
 greetUser();
