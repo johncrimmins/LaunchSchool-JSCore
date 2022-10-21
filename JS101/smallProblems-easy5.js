@@ -1,6 +1,3 @@
-// use readlineSync.prompt to ask for length and width of room in meters, then log area of room to
-// console in both square meters and square feet
-
 let rlSync = require('readline-sync');
 
 function calcSumOrProduct () {
